@@ -457,7 +457,7 @@ var Lightbox = (function ($) {
 			value: function _showVideoIframe(url, width, height, $containerForElement) {
 				// should be used for videos only. for remote content use loadRemoteContent (data-type=url)
 				height = height || width; // default to square
-				$containerForElement.html('<div class="embed-responsive embed-responsive-16by9"><iframe width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>');
+				$containerForElement.html('<div class="embed-responsive embed-responsive-16by9"><iframe width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen class="embed-responsive-item" allow="autoplay; fullscreen"></iframe></div>');
 				this._resize(width, height);
 				this._config.onContentLoaded.call(this);
 				if (this._$modalArrows) this._$modalArrows.css('display', 'none'); //hide the arrows when showing video
